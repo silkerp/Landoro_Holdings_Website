@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "landoro-site",
+      "runtimeExecutable": "ruby",
+      "runtimeArgs": ["-run", "-e", "httpd", "/Users/ilankerpel/Documents/GitHub/Landoro_Holdings_Website/.claude/worktrees/naughty-aryabhata", "-p", "8765"],
+      "port": 8765
+    }
+  ]
+}

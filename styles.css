@@ -1,0 +1,403 @@
+/* =========================================
+   Landoro Holdings LLC — Main Stylesheet
+   ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream: #FFF8F1;
+  --tan: #E0BE9A;
+  --brown: #5B4D43;
+  --black: #111111;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--black);
+  background-color: var(--cream);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--white);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+  height: 96px;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  height: 72px;
+  width: auto;
+}
+
+.company-name {
+  font-family: 'Fahkwang', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--black);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+nav a {
+  font-family: 'Fahkwang', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--black);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--brown);
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 48px 32px;
+}
+
+.hero-tagline {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 8px;
+  text-shadow: 0 1px 3px rgba(255,255,255,0.3);
+}
+
+.hero-title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.3);
+}
+
+/* =========================================
+   ABOUT
+   ========================================= */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+  background-color: var(--cream);
+}
+
+.about-text {
+  padding: 80px 60px 80px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-text h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 32px;
+  letter-spacing: 0.01em;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--black);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.about-text .caption {
+  margin-top: 24px;
+  font-size: 0.875rem;
+  color: var(--brown);
+  font-style: italic;
+}
+
+.about-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* =========================================
+   CONTACT
+   ========================================= */
+
+.contact {
+  background-color: var(--cream);
+  padding: 80px 48px 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-family: 'Fahkwang', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 64px;
+  letter-spacing: 0.02em;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+.contact-col h3 {
+  font-family: 'Fahkwang', serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+
+.contact-col address,
+.contact-col p {
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--black);
+}
+
+.contact-col a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.contact-col a:hover {
+  color: var(--brown);
+  text-decoration: underline;
+}
+
+.contact-col table {
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.contact-col table td {
+  padding: 2px 24px 2px 0;
+  line-height: 1.8;
+  color: var(--black);
+  vertical-align: top;
+}
+
+/* =========================================
+   MAP
+   ========================================= */
+
+.map-wrapper {
+  background-color: var(--cream);
+  padding: 0 0 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  display: block;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  background-color: var(--cream);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: var(--brown);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+  .header-inner {
+    padding: 0 24px;
+    height: 72px;
+  }
+
+  .logo {
+    height: 52px;
+  }
+
+  .company-name {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    gap: 28px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text {
+    padding: 60px 32px;
+    order: 1;
+  }
+
+  .about-image {
+    order: 2;
+    min-height: 400px;
+  }
+
+  .contact {
+    padding: 60px 24px 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .map-wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  footer {
+    padding: 16px 24px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    padding: 0 16px;
+  }
+
+  .company-name {
+    display: none;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    min-height: 55vh;
+  }
+
+  .about-text {
+    padding: 48px 20px;
+  }
+
+  .contact {
+    padding: 48px 16px 0;
+  }
+
+  .map-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  footer {
+    padding: 16px;
+  }
+}
