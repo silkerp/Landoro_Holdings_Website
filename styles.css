@@ -100,7 +100,7 @@ nav a:hover {
   position: relative;
   min-height: 70vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   overflow: hidden;
 }
@@ -118,21 +118,21 @@ nav a:hover {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 48px 32px;
+  padding: 40px 32px 0;
 }
 
 .hero-tagline {
   font-family: 'Caveat', cursive;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
   font-weight: 400;
   color: var(--black);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   text-shadow: 0 1px 3px rgba(255,255,255,0.3);
 }
 
 .hero-title {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 400;
   color: var(--black);
   letter-spacing: 0.01em;
